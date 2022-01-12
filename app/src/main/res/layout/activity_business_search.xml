@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_to_blue"
+    tools:context=".BusinessSearch">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/businessList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/bordered"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lessOptns" />
+
+    <EditText
+        android:id="@+id/inputLocation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="sans-serif"
+        android:hint="@string/InputLocationHint"
+        android:backgroundTint="@color/very_dark_blue"
+        android:textCursorDrawable="@null"
+        android:textColor="@color/black"
+        android:textColorHint="@color/dark_gray"
+        app:layout_constraintBottom_toTopOf="@+id/inputTerm"
+        app:layout_constraintEnd_toStartOf="@+id/searchJobs"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/inputTerm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="sans-serif"
+        android:hint="@string/InputTermHint"
+        android:backgroundTint="@color/very_dark_blue"
+        android:textCursorDrawable="@null"
+        android:textColor="@color/black"
+        android:textColorHint="@color/dark_gray"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/businessList"
+        app:layout_constraintEnd_toStartOf="@+id/lessOptns"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputLocation" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/searchJobs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/Search"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/dark_blue"
+        app:layout_constraintBottom_toTopOf="@+id/lessOptns"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cornerRadius="30dp"
+        app:layout_constraintStart_toEndOf="@+id/inputLocation"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/lessOptns"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/roboto_bold"
+        android:visibility="gone"
+        android:text="@string/Less"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/dark_blue"
+        app:layout_constraintBottom_toTopOf="@+id/businessList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cornerRadius="30dp"
+        app:layout_constraintStart_toEndOf="@+id/inputTerm"
+        app:layout_constraintTop_toBottomOf="@+id/searchJobs" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

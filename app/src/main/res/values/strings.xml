@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Tražilica Poslova</string>
+    <string name="About">O aplikaciji</string>
+    <string name="Description">Tražilica poslova je android aplikacija za pretraživanje
+        željenih poslova preko Yelp API-ja.\nNakon što kliknemo prvi gumb u glavnom izborniku,
+        u novootvorenom prozoru možemo upisati lokaciju željenog zanimanja.\nOsim toga možemo također kliknuti
+        ikonu na radnoj traci kako bi mogli otkriti još jednu opciju za pretraživanje, a to je pojam.\nNakon
+        što kliknemo gumb Pretraži izbacuje se lista poslova koji se podudaraju s tom lokacijom i
+        zanimanjem koje smo unjeli.\n\nTakođer omogućuje
+        spremanje onih za koje smo zainteresirani u listu želja.\nMoguće je otvoriti poslove
+        koje smo spremili u listu želja pritiskom na drugu tipku u glavnom izborniku.\nTada nam se
+        otvori popis poslova koje smo spremili i omogućeno nam je tražiti njihovu lokaciju preko Google mapa.
+    </string>
+    <string name="Next">DALJE</string>
+    <string name="Purpose">Ova aplikacija je napravljena od strane studenta 3. godine preddiplomskog
+        sveučilišnog studija računarstvo, Dražena Antunovića.\n\nNapravljena je u svrhu
+        ispunjavanja dijela aktivnosti iz kolegija
+        Osnove razvoja web i mobilnih aplikacija (ORWiMA) na Fakultetu elektrotehnike, računarstva i informacijskih tehnologija,
+        Osijek u Osijeku.\n\nIkona aplikacije je preuzeta sa www.freeiconshop.com.</string>
+    <string name="Back">NAZAD</string>
+    <string name="End">ZAVRŠI</string>
+    <string name="SearchWindow">Pretraži poslove</string>
+    <string name="SavedWindow">Spremljeni poslovi</string>
+    <string name="AppName">TRAŽILICA POSLOVA</string>
+    <string name="Version">verzija: 1.0.0</string>
+    <string name="InputCriteria">InputSearch</string>
+    <string name="Search">Pretraži</string>
+    <string name="InputLocationHint">Lokacija (obavezno)</string>
+    <string name="DefaultName">Prodavnica namirnica</string>
+    <string name="DefaultCategory">Grocery store</string>
+    <string name="DefaultReviewNumber">446 recenzija</string>
+    <string name="DefaultStatus">Otvoreno</string>
+    <string name="InputTermHint">Pojam (opcionalno)</string>
+    <string name="Less">MANJE</string>
+    <string name="Extras">Više opcija</string>
+    <string name="InvalidRequest">Neuspješan zahtjev.</string>
+    <string name="EmptyRequest">Molimo unesite lokaciju.</string>
+    <string name="Add">DODAJ</string>
+    <string name="Remove">X</string>
+    <string name="DefaultPhoneNumber">+00000000000</string>
+    <string name="DefaultCity">Osijek</string>
+    <string name="DefaultAddress">Sjenjak</string>
+</resources>

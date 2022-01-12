@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp">
+
+    <ImageView
+        android:id="@+id/businessPhoto"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/default_business" />
+
+    <TextView
+        android:id="@+id/businessName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="start"
+        android:maxWidth="200dp"
+        android:text="@string/DefaultName"
+        android:textAlignment="gravity"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/very_dark_blue"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/businessRating"
+        app:layout_constraintStart_toEndOf="@+id/businessPhoto"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RatingBar
+        android:id="@+id/businessRating"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:numStars="5"
+        android:progressBackgroundTint="@color/light_red"
+        android:progressTint="@color/red"
+        android:rating="4"
+        android:stepSize="0.5"
+        app:layout_constraintBottom_toTopOf="@+id/businessCategory"
+        app:layout_constraintStart_toEndOf="@+id/businessPhoto"
+        app:layout_constraintStart_toStartOf="@+id/businessName"
+        app:layout_constraintTop_toBottomOf="@+id/businessName" />
+
+    <TextView
+        android:id="@+id/businessCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/DefaultCategory"
+        android:textColor="@color/very_dark_blue"
+        android:textSize="15sp"
+        android:maxWidth="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/businessPhoto"
+        app:layout_constraintStart_toStartOf="@+id/businessRating"
+        app:layout_constraintTop_toBottomOf="@+id/businessRating" />
+
+    <TextView
+        android:id="@+id/reviewCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="70dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/DefaultReviewNumber"
+        android:textColor="@color/very_dark_blue"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/businessCategory"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/businessRating"
+        app:layout_constraintTop_toBottomOf="@+id/businessName" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="sans-serif-thin"
+        android:text="@string/DefaultStatus"
+        android:textColor="@color/very_dark_blue"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/addItem"
+        android:layout_width="63dp"
+        android:layout_height="31dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="sans-serif"
+        android:padding="1dp"
+        android:text="@string/Add"
+        android:textSize="11sp"
+        app:backgroundTint="@color/very_light_blue"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

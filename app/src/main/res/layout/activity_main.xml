@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toTopOf="@id/appName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/AppName"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:shadowColor="@color/very_dark_blue"
+        android:shadowRadius="10"
+        android:shadowDx="6"
+        android:shadowDy="6"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/searchButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/logoImage" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/searchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:padding="15dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="@string/SearchWindow"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:backgroundTint="@color/dark_blue"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/dataButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appName" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/dataButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text="@string/SavedWindow"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="@color/white"
+        android:padding="15dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textSize="15sp"
+        app:cornerRadius="30dp"
+        app:backgroundTint="@color/dark_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchButton" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/Version"
+        android:textColor="@color/white"
+        android:fontFamily="@font/roboto_thin"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dataButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
