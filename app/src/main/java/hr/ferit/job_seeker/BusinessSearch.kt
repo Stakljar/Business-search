@@ -52,7 +52,7 @@ class BusinessSearch : AppCompatActivity() {
             businessView.adapter = BusinessesAdapter(ArrayList())
 
             val request = ServiceBuilder.buildService(YelpBusinessService::class.java)
-            val call = request.getPersons("Bearer $API_KEY",
+            val call = request.getBusinesses("Bearer $API_KEY",
                     location.text.toString(), term.text.toString(), LIMIT)
             if(location.text.toString() == ""){
                 Toast.makeText(this@BusinessSearch, getString(R.string.EmptyRequest),
