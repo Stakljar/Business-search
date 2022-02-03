@@ -22,9 +22,6 @@
             android:name=".GoogleMapsLocation"
             android:exported="false" />
         <activity
-            android:name=".BusinessesAdapter"
-            android:exported="false" />
-        <activity
             android:name=".Wishlist"
             android:exported="false" />
         <activity
