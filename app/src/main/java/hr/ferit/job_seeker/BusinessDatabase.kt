@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.migration.Migration
 
-@Database(entities = [Business::class], version = 1)
+@Database(entities = [Business::class], version = 1, exportSchema = false)
 abstract class BusinessDatabase : RoomDatabase() {
 
     companion object{
