@@ -19,19 +19,19 @@
             />
 
         <activity
-            android:name=".GoogleMapsLocation"
+            android:name=".navigation.GoogleMapsLocation"
             android:exported="false" />
         <activity
-            android:name=".Wishlist"
+            android:name=".ui.Wishlist"
             android:exported="false" />
         <activity
-            android:name=".BusinessSearch"
+            android:name=".ui.BusinessSearch"
             android:exported="false" />
         <activity
-            android:name=".About"
+            android:name="hr.ferit.job_seeker.ui.description.About"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

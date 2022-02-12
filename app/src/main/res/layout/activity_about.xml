@@ -6,11 +6,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_blue"
-    tools:context=".About">
+    tools:context=".ui.description.About">
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/aboutFragment"
-        android:name="hr.ferit.job_seeker.InfoFragment"
+        android:name="hr.ferit.job_seeker.ui.description.InfoFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
