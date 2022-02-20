@@ -13,7 +13,4 @@ object DataMediator {
     fun getDao(): BusinessDao{
         return businessDao
     }
-    suspend fun removeFromDB(business: Business){
-        businessDao.delete(business)
-    }
 }
