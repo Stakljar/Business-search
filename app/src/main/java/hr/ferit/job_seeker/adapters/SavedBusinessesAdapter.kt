@@ -37,7 +37,7 @@ class SavedBusinessesAdapter(private val items: MutableList<Business>, private v
                 holder.bind(items[position], context)
                 holder.itemView.findViewById<Button>(R.id.removeBusiness).setOnClickListener{
                     runBlocking{
-                        DataMediator.removeFromDB(items[position])
+                        DataMediator.getDao().delete(items[position])
                     }
                     items.removeAt(position)
                     notifyDataSetChanged()
