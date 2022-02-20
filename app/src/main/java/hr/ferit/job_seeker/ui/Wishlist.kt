@@ -16,8 +16,6 @@ import kotlinx.coroutines.runBlocking
 
 class Wishlist : AppCompatActivity() {
 
-    private lateinit var database: BusinessDatabase
-    private lateinit var businessDao: BusinessDao
     private lateinit var businessesView: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,23 +28,12 @@ class Wishlist : AppCompatActivity() {
 
         businessesView = findViewById(R.id.savedBusinessList)
         runBlocking {
-
-                database = BusinessDatabase.getInstance(applicationContext)!!
-                businessDao = database.getBusinessDao()
-                DataMediator.setDao(businessDao)
-                for (i in DataMediator.getAllBusinesses())
-                    if(!(businessDao.getAllIds().contains(i.id)))
-                        businessDao.insert(i)
                 businessesView.apply{
                     layoutManager =
                         LinearLayoutManager(this@Wishlist)
                     adapter =
-                        SavedBusinessesAdapter(businessDao.getAll().toMutableList(), context)
-
+                        SavedBusinessesAdapter(DataMediator.getDao().getAll().toMutableList(), context)
                 }
-                DataMediator.removeAll()
         }
-
-
     }
 }
