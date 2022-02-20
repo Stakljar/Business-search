@@ -14,6 +14,9 @@ import hr.ferit.job_seeker.ui.description.About
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var database: BusinessDatabase
+    private lateinit var businessDao: BusinessDao
+    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -28,6 +31,9 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, Wishlist::class.java)
             startActivity(intent)
         }
+        database = BusinessDatabase.getInstance(applicationContext)!!
+        businessDao = database.getBusinessDao()
+        DataMediator.setDao(businessDao)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
