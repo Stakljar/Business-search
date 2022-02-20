@@ -57,17 +57,22 @@ class BusinessesAdapter(private val items: List<Businesses>):
             businessName.text = businesses.name
             businessRating.rating = businesses.rating
             saveToList.setOnClickListener{
-                DataMediator.addBusiness(
-                    Business(
-                        "${businesses.id}",
-                        "${businesses.name}",
-                        "${businesses.phone}",
-                        "${businesses.location.city}",
-                        "${businesses.location.address1}",
-                        businesses.coordinates.latitude,
-                        businesses.coordinates.longitude
-                    )
-                )
+                runBlocking {
+                    try {
+                        DataMediator.getDao().insert(
+                            Business(
+                                "${businesses.id}",
+                                "${businesses.name}",
+                                "${businesses.phone}",
+                                "${businesses.location.city}",
+                                "${businesses.location.address1}",
+                                businesses.coordinates.latitude,
+                                businesses.coordinates.longitude
+                            )
+                        )
+                    }
+                    catch(e: SQLiteConstraintException){ }
+                }
             }
             reviews.text = "${businesses.review_count} recenzija"
             try{
